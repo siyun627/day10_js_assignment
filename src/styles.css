@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+}
+
+.span {
+  display: block;
+}
+
+div {
+  margin: 5px;
+}
