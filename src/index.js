@@ -22,22 +22,12 @@ function handleSubmit(event) {
 }
 
 function compareResult() {
-  const message = document.createElement("span");
   const userNumber = parseInt(userInput.value);
   const maxRange = parseInt(rangeSlider.value);
   const machineNumber = Math.floor(Math.random() * maxRange) + 1;
-  span.innerText =
-    "You chose: " + userNumber + ", the machine chose: " + machineNumber;
-  if (userNumber === machineNumber) {
-    form.appendChild(message);
-    message.innerText = "😍You Won!!!!😍";
-    message.classList.add("span");
-  } else {
-    form.appendChild(message);
-    message.innerText = "You lose....😭";
-    message.classList.add("span");
-  }
-  submit.addEventListener("click", compareResult);
+  span.innerText = `
+  You chose: ${userNumber}, the machine chose: ${machineNumber}. 
+  ${userNumber === machineNumber ? "😍You Won!!!!😍" : "You lose....😭"}`;
 }
 
 function init() {
